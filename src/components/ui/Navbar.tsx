@@ -20,7 +20,6 @@ export function Navbar({ className }: { className?: string }) {
             X
           </span>
         </p>
-        {/* <Image src={"/logo.svg"} height={60} width={60} alt="logo"></Image> */}
         <div className=" hidden md:block">
           <Menu setActive={setActive}>
             <MenuItem setActive={setActive} active={active} item="Services">
@@ -75,7 +74,7 @@ export function Navbar({ className }: { className?: string }) {
         </div>
         <div>
           <a
-            href="  "
+            href="#"
             target="_blank"
             className=" text-white text-sm px-3 font-semibold cursor-pointer bg-purple-500 hover:text-black transition duration-200 flex gap-1 shadow-sm shadow-purple-500 md:px-5 justify-center items-center  md:py-2 py-1.5 rounded-xl border-purple-500/80 border-2"
           >

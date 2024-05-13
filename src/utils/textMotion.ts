@@ -13,27 +13,3 @@ export const textMotion = {
     },
   },
 };
-// for left right motion in cotact (do it later )------------
-// export const staggerContainer = (
-//   staggerChilderen: any,
-//   delayChildren: any
-// ) => ({
-//   hidden: {},
-//   show: {
-//     transition: {
-//       staggerChilderen,
-//       delayChildren,
-//     },
-//   },
-// });
-// const fadeIn = (
-//   direction: string,
-//   type: string,
-//   duration: string,
-//   delay: number
-// ) => ({
-//   hidden: {
-//     x: direction === "left" ? 100 : direction === "right" ? -100 : 0,
-//     y: direction === "up" ? 100 : direction === "down" ? -100 : 0,
-//   },
-// });

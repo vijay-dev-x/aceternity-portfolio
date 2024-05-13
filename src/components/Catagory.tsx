@@ -1,5 +1,5 @@
 import { catagoriesId, products } from "@/utils/data";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { textMotion } from "@/utils/textMotion";
 import { ThreeDCardDemo } from "./ui/Card";
