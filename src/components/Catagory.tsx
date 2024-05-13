@@ -39,8 +39,8 @@ export default function Category() {
         ))}
       </div>
       <div className=" grid grid-cols-1 lg:grid-cols-2 gap-5">
-        {filteredProduct.map((product) => (
-          <ThreeDCardDemo product={product}></ThreeDCardDemo>
+        {filteredProduct.map((product, index) => (
+          <ThreeDCardDemo key={index} product={product}></ThreeDCardDemo>
         ))}
       </div>
     </motion.div>

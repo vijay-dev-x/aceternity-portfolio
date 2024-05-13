@@ -110,7 +110,7 @@ const skiilsData = [
 
 export default function Skills() {
   return (
-    <div className=" text-white flex flex-col justify-center p-5 items-center">
+    <div className=" text-white flex flex-col justify-center p-2 md:p-5 items-center">
       <TitleText text="Skills I Have"></TitleText>
       <motion.div
         variants={textMotion}
@@ -121,18 +121,22 @@ export default function Skills() {
         {skiilsData.map((skill, id) => (
           <motion.div
             key={id}
-            className=" h-40 w-40 bg-purple-600/10 p-2 hover:bg-purple-600/30 transition duration-300 ease-in flex flex-col gap-1  justify-center items-center rounded-md"
+            className=" md:h-50 md:w-50 h-30 w-30 bg-purple-600/10 p-2 hover:bg-purple-600/30 transition duration-300 ease-in flex flex-col gap-1  justify-center items-center rounded-md"
           >
             <Image
               src={skill.icon}
               alt="skill logo"
-              height={100}
-              width={100}
+              height={20}
+              width={20}
+              unoptimized={true}
+              className="h-20 object-contain w-20 md:w-40 md:h-40"
             ></Image>
-            <h1 className=" whitespace-nowrap font-bold text-purple-500">
+            <h1 className="  whitespace-nowrap text-sm md:text-lg font-bold text-purple-500">
               {skill.name}
             </h1>
-            <p className=" font-extrabold text-white/30">{skill.percentage}</p>
+            <p className=" text-xs md:text-sm font-extrabold text-white/30">
+              {skill.percentage}
+            </p>
           </motion.div>
         ))}
       </motion.div>

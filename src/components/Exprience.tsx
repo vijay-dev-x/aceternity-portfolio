@@ -16,7 +16,7 @@ const EducationData = [
 ];
 export default function Exprience() {
   return (
-    <div className=" p-5 container mx-auto">
+    <div className="p-5 mx-auto">
       <TitleText text="Exprience"></TitleText>
       <div className=" my-10 flex gap-10 flex-col md:flex-row">
         {EducationData.map((data, id) => (

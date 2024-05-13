@@ -1,17 +1,32 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Label } from "./label";
 import { Input } from "./input";
 import { cn } from "@/utils/cn";
-import {
-  IconBrandGithub,
-  IconBrandGoogle,
-  IconBrandOnlyfans,
-} from "@tabler/icons-react";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import { IconMailCheck } from "@tabler/icons-react";
 
 export function SignupFormDemo() {
+  const ref = useRef<HTMLFormElement>("");
+  const [isSend, setIsSend] = useState(false);
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    emailjs
+      .sendForm("service_48ai4ab", "template_lo02qbh", ref.current, {
+        publicKey: "UveIis9OMRJLAl_Ey",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          setIsSend(true);
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
     console.log("Form submitted");
   };
   return (
@@ -23,7 +38,7 @@ export function SignupFormDemo() {
         We will work togeter, Grow together
       </p>
 
-      <form className="my-4" onSubmit={handleSubmit}>
+      <form ref={ref} className="my-4" onSubmit={handleSubmit}>
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
           <LabelInputContainer>
             <Label htmlFor="firstname">First name</Label>
@@ -58,6 +73,14 @@ export function SignupFormDemo() {
 
         <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-5 h-[1px] w-full" />
       </form>
+      {isSend && (
+        <div>
+          <p className=" text-center gap-2 flex justify-center  text-green-400 font-semibold text-sm">
+            Message sent
+            <IconMailCheck className=" text-green-300"></IconMailCheck>
+          </p>
+        </div>
+      )}
     </div>
   );
 }

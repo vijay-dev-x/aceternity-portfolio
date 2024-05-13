@@ -39,7 +39,7 @@ export function ThreeDCardDemo({ product }: { product: productsType }) {
             <CardItem
               translateZ={20}
               as={Link}
-              href="https://twitter.com/mannupaaji"
+              href={product.link}
               target="__blank"
               className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
             >
@@ -47,10 +47,12 @@ export function ThreeDCardDemo({ product }: { product: productsType }) {
             </CardItem>
             <CardItem
               translateZ={20}
-              as="button"
-              className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+              as={Link}
+              href={product.repo}
+              target="__blank"
+              className="px-4 py-2 rounded-xl font-semibold bg-white text-xs text-black"
             >
-              Sign up
+              Github repo
             </CardItem>
           </div>
         </CardBody>

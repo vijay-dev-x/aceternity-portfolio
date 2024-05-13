@@ -4,6 +4,7 @@ export interface productsType {
   title: string;
   link: string;
   thumbnail: string;
+  repo: string;
 }
 interface catagoryIdType {
   id: number;
@@ -19,6 +20,7 @@ export const products: productsType[] = [
     catagoryId: 2,
     title: "Twitter Clone",
     link: "#",
+    repo: "#",
     thumbnail: "/x.jpg",
   },
   {
@@ -26,13 +28,15 @@ export const products: productsType[] = [
     catagoryId: 2,
     title: "Youtube Clone",
     link: "#",
-    thumbnail: "/youtube.png",
+    repo: "#",
+    thumbnail: "/yt.png",
   },
   {
     id: 3,
     catagoryId: 1,
     title: "Animated portfolio",
     link: "#",
+    repo: "#",
     thumbnail: "/animated-portfolio.png",
   },
 
@@ -41,6 +45,7 @@ export const products: productsType[] = [
     catagoryId: 2,
     title: "Panda VPN Ui clone",
     link: "https://editorially.org",
+    repo: "#",
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/editorially.png",
   },
@@ -49,6 +54,7 @@ export const products: productsType[] = [
     catagoryId: 1,
     title: "Editrix AI",
     link: "https://editrix.ai",
+    repo: "#",
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/editrix.png",
   },
@@ -57,6 +63,7 @@ export const products: productsType[] = [
     catagoryId: 2,
     title: "Pixel Perfect",
     link: "https://app.pixelperfect.quest",
+    repo: "#",
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/pixelperfect.png",
   },
@@ -66,23 +73,8 @@ export const products: productsType[] = [
     catagoryId: 2,
     title: "Algochurn",
     link: "https://algochurn.com",
+    repo: "#",
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/algochurn.png",
-  },
-  {
-    id: 8,
-    catagoryId: 1,
-    title: "Aceternity UI",
-    link: "https://ui.aceternity.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/aceternityui.png",
-  },
-  {
-    id: 9,
-    catagoryId: 1,
-    title: "Tailwind Master Kit",
-    link: "https://tailwindmasterkit.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/tailwindmasterkit.png",
   },
 ];
