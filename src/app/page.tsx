@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import HeroParalarlax from "@/components/HeroParalarlax";
 import MyRecentWork from "@/components/MyRecentWork";
 import Skills from "@/components/Skills";
-import { Navbar, NavbarDemo } from "@/components/ui/Navbar";
+import { Navbar } from "@/components/ui/Navbar";
 import React from "react";
 
 export default function page() {
