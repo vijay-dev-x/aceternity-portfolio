@@ -8,26 +8,30 @@ import emailjs from "@emailjs/browser";
 import { IconMailCheck } from "@tabler/icons-react";
 
 export function SignupFormDemo() {
-  const ref = useRef<HTMLFormElement>("");
+  const ref = useRef<HTMLFormElement | null>(null);
   const [isSend, setIsSend] = useState(false);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm("service_48ai4ab", "template_lo02qbh", ref.current, {
-        publicKey: "UveIis9OMRJLAl_Ey",
-      })
-      .then(
-        () => {
-          console.log("SUCCESS!");
-          setIsSend(true);
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
-        }
-      );
-    console.log("Form submitted");
+    if (ref.current) {
+      emailjs
+        .sendForm("service_48ai4ab", "template_lo02qbh", ref.current, {
+          publicKey: "UveIis9OMRJLAl_Ey",
+        })
+        .then(
+          () => {
+            console.log("SUCCESS!");
+            setIsSend(true);
+          },
+          (error) => {
+            console.log("FAILED...", error.text);
+          }
+        );
+      console.log("Form submitted");
+    } else {
+      console.log("Form reference is null");
+    }
   };
   return (
     <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-4 shadow-input bg-white dark:bg-black">
