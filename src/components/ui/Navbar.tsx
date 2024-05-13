@@ -2,8 +2,7 @@
 import React, { useState } from "react";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "../Navbar-menu";
 import { cn } from "@/utils/cn";
-import Image from "next/image";
-import { IconDownload, IconExternalLink, IconLink } from "@tabler/icons-react";
+import { IconExternalLink } from "@tabler/icons-react";
 
 export function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
